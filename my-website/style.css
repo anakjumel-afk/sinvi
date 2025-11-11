@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: orange;
+}
+.envelope{
+    position: relative;
+    cursor: pointer;
+
+}
+
+.back{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: #f4c2c2;
+}
+.front{
+    position: absolute;
+    border-right: 130px solid #ffd9dc;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 120px;
+    z-index: 3px;
+}
+.front:before {
+    content: "";
+    position: absolute;
+    border-left: 130px solid #ffd9dc;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: -100px;
+    left: -120px;
+}
+.front:after {
+    content: '';
+    position: absolute;
+    border-bottom: 105px solid #f1b6b6;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+    width: 0;
+    top: -5px;
+    left: -120px;
+}
+.top {
+    position: absolute;
+    border-top: 105px solid #e6a8a8;
+    border-left:  125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    transform-origin: top;
+    z-index: 0.4s;
+    
+}
+.envelope:hover .top{
+  transform: rotateX(160deg);}
+  .letter{
+    position: absolute;
+    background: white;
+    width: 250px;
+    height: 180px;
+    transition: 0.4s;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+.envelope:hover .letter{
+transform: translateY(-100px);
+z-index: 2;
+}
+.text1{
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+    top: -100px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.letter{
+    text-align: center;
+    font-size: 17px;
+    font-family: arial helvetica sans-serif;
+    margin-top: 20px;
+    font-weight: bold;
+    color:black;
+    position: absolute; 
+    top: 0;
+    left: 0;}
+
+    
